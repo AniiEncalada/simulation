@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Juego de Volados</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="my-3">
+            <h3 class="text-center">Juego de Volados</h3>
+            <h6 class="text-center">Simulación</h6>
+        </header>
+
+        <div class="row">
+
+            <div class="col-md-10 my-5 mx-auto">
+                <div class="card">
+                    <div class="card-header">
+                        <small>
+                            <b>Valores a Ingresar</b>
+                        </small>
+                    </div>
+                    <div class="card-body">
+                        <form id="form">
+                            <div class="form-group">
+                                <label for="corridas"><small>Número de corridas</small></label>
+                                <input type="number" class="form-control" id="corridas" name="corridas"
+                                    placeholder="Ingrese el número de corridas" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inicial"><small>Cantidad Inicial del volado:</small></label>
+                                    <input type="number" class="form-control" id="inicial" name="inicial"
+                                        placeholder="Ingrese la cantidad inicial antes del volado" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="apuesta"><small>Apuesta Inicial:</small></label>
+                                    <input type="number" class="form-control" id="apuesta" name="apuesta"
+                                        placeholder="Ingrese la cantidad de apuesta inicial" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="meta"><small>Cantidad Meta:</small></label>
+                                    <input type="number" class="form-control" id="meta" name="meta"
+                                        placeholder="Ingrese la cantidad meta del volado" required>
+                                </div>
+                            </div>
+                            <div class="float-right">
+                                <input type="submit" class="btn btn-warning btn-sm" value="Ejecutar">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-10 my-1 mx-auto text-center">
+                <b><span> Resultado Obtenido</span></b>
+                <table id="table" class="table table-hover table-dark">
+                    <thead>
+                        <tr>
+                            <th>Número de Corrida</th>
+                            <th>Cantidad antes del volado</th>
+                            <th>Apuesta</th>
+                            <th>Número aleatorio</th>
+                            <th>¿Ganó?</th>
+                            <th>Cantidad despues del volado</th>
+                            <th>¿Se llegó a la meta?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/jquery-validation-1.19.1/dist/jquery.validate.min.js"></script>
+    <script src="./js/jquery-validation-1.19.1/dist/localization/messages_es.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Juego de Volados</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="my-3">
+            <h3 class="text-center">Juego de Volados</h3>
+            <h6 class="text-center">Simulación</h6>
+        </header>
+
+        <div class="row">
+
+            <div class="col-md-10 my-5 mx-auto">
+                <div class="card">
+                    <div class="card-header">
+                        <small>
+                            <b>Valores a Ingresar</b>
+                        </small>
+                    </div>
+                    <div class="card-body">
+                        <form id="form">
+                            <div class="form-group">
+                                <label for="dias"><small>Número de días</small></label>
+                                <input type="number" class="form-control" id="dias" name="dias"
+                                    placeholder="Ingrese el número de días" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="tinas"><small>Número de tinas:</small></label>
+                                    <input type="number" class="form-control" id="tinas" name="tinas"
+                                        placeholder="Ingrese la cantidad de tinas por día" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="limite"><small>Peso Límite:</small></label>
+                                    <input type="number" class="form-control" id="limite" name="limite"
+                                        placeholder="Ingrese el peso límite del camión" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="extra"><small>Costo extra:</small></label>
+                                    <input type="number" class="form-control" id="extra" name="extra"
+                                        placeholder="Ingrese el costo extra por exceso" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="camion"><small>Costo nuevo Camión:</small></label>
+                                    <input type="number" class="form-control" id="camion" name="camion"
+                                        placeholder="Ingrese el costo promedio anual del nuevo camión" required>
+                                </div>
+                            </div>
+                            <div class="float-right">
+                                <input type="submit" class="btn btn-warning btn-sm" value="Ejecutar">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-10 my-1 mx-auto text-center">
+                <div class="card">
+                    <div class="card-header">
+                        <small><b>Detalles</b></small>
+                    </div>
+                    <div class="card body">
+                        <p id="resultado"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-10 my-1 mx-auto text-center">
+                <b><span> Resultado Obtenido</span></b>
+                <table id="table" class="table table-hover table-dark">
+                    <thead>
+                        <tr>
+                            <th>Número de Día</th>
+                            <th>Tina</th>
+                            <th>Número Aleatorio</th>
+                            <th>Peso Simulado</th>
+                            <th>Peso Simulado Acumulado</th>
+                            <th>¿Se excedió el peso del camión?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/jquery-validation-1.19.1/dist/jquery.validate.min.js"></script>
+    <script src="./js/jquery-validation-1.19.1/dist/localization/messages_es.js"></script>
+    <script src="./js/pesos.js"></script>
+</body>
+
+</html>
